@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, ShoppingBag, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import logo from "@/assets/boitas-logo.png.asset.json";
+import logo from "@/assets/boitas-logo.png";
 import { useCart, WA_URL } from "@/lib/cart";
 
 const links = [
@@ -34,7 +34,7 @@ export function SiteNav() {
     >
       <div className="container-x flex items-center justify-between h-20">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo.url} alt="Boitas" className="h-12 w-12 object-contain" />
+          <img src={logo} alt="Boitas" className="h-12 w-12 object-contain" />
           <span className="sr-only">Boitas</span>
         </Link>
 

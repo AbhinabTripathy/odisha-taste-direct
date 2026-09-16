@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, Mail, Phone } from "lucide-react";
-import logo from "@/assets/boitas-logo.png.asset.json";
+import logo from "@/assets/boitas-logo.png";
 import { WA_URL } from "@/lib/cart";
 
 export function SiteFooter() {
@@ -8,7 +8,7 @@ export function SiteFooter() {
     <footer className="bg-primary text-primary-foreground mt-24">
       <div className="container-x py-16 grid gap-12 md:grid-cols-4">
         <div className="md:col-span-2">
-          <img src={logo.url} alt="Boitas" className="h-16 w-16 bg-background rounded-full p-1" />
+          <img src={logo} alt="Boitas" className="h-16 w-16 bg-background rounded-full p-1" />
           <p className="mt-4 max-w-sm text-sm text-primary-foreground/80 leading-relaxed">
             Boitas brings the timeless flavours of Odisha to homes across India — handcrafted,
             heritage-rooted, and made with quiet devotion.

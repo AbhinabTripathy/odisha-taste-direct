@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import khaja from "@/assets/Khaja_Masala.png.asset.json";
-import chuda from "@/assets/Chuda_Mixture.png.asset.json";
-import badi from "@/assets/Fried_Badi.png.asset.json";
-import nimki from "@/assets/Nimki.jpg.asset.json";
+import khaja from "@/assets/Khaja_Masala.png";
+import chuda from "@/assets/Chuda_Mixture.png";
+import badi from "@/assets/Fried_Badi.png";
+import nimki from "@/assets/Nimki.jpg";
 
 export const Route = createFileRoute("/stories")({
   head: () => ({
@@ -20,25 +20,25 @@ export const Route = createFileRoute("/stories")({
 
 const stories = [
   {
-    image: khaja.url,
+    image: khaja,
     title: "The Story of Khaja",
     summary: "Thirty-two folds, one temple, and a sweet that has travelled through centuries of Puri's Jagannath tradition.",
     tag: "Heritage",
   },
   {
-    image: nimki.url,
+    image: nimki,
     title: "Nimki: The Odia Tea-Time Ritual",
     summary: "Diamond-cut, cumin-spiced and fried to a golden crisp — the cracker that completes every evening cup of tea.",
     tag: "Tradition",
   },
   {
-    image: chuda.url,
+    image: chuda,
     title: "The Heritage of Chuda Mixture",
     summary: "How a simple bowl of flattened rice became Odisha's most beloved everyday snack.",
     tag: "Everyday",
   },
   {
-    image: badi.url,
+    image: badi,
     title: "Handmade with Generations of Experience",
     summary: "Meet the women-led artisan clusters in coastal Odisha who shape every badi, one by one, under the summer sun.",
     tag: "Artisans",
