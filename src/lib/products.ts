@@ -1,9 +1,9 @@
-import chuda from "@/assets/Chuda_Mixture.png.asset.json";
-import badi from "@/assets/Fried_Badi.png.asset.json";
-import khajaMasala from "@/assets/Khaja_Masala.png.asset.json";
-import nimki from "@/assets/Nimki.jpg.asset.json";
-import moa from "@/assets/Moa_Bites.jpg.asset.json";
-import arisa from "@/assets/Arisa.jpg.asset.json";
+import chuda from "@/assets/Chuda_Mixture.png";
+import badi from "@/assets/Fried_Badi.png";
+import khajaMasala from "@/assets/Khaja_Masala.png";
+import nimki from "@/assets/Nimki.jpg";
+import moa from "@/assets/Moa_Bites.jpg";
+import arisa from "@/assets/Arisa.jpg";
 
 export type WeightOption = { label: string; price: number };
 
@@ -29,7 +29,7 @@ export const products: Product[] = [
     name: "Khaja Masala Crunch",
     tagline: "Layered. Fiery. Unforgettable.",
     category: "Savouries",
-    image: khajaMasala.url,
+    image: khajaMasala,
     shortDescription: "Flaky layered khaja dusted with our house masala.",
     description:
       "A savoury reinvention of Puri's iconic khaja — folded thirty-two times, fried till golden, then finished with a bold masala blend of chilli, cumin and rock salt.",
@@ -48,7 +48,7 @@ export const products: Product[] = [
     name: "Nimki",
     tagline: "Crisp. Salty. Unapologetically addictive.",
     category: "Savouries",
-    image: nimki.url,
+    image: nimki,
     shortDescription: "Diamond-shaped savoury crackers, spiced with cumin and finished with rock salt.",
     description:
       "Our Nimki is the quintessential Odia tea-time companion — crisp, diamond-shaped crackers kneaded with cumin and carom seeds, then fried to a delicate golden finish and dusted with rock salt. Simple, honest and impossible to stop at one.",
@@ -67,7 +67,7 @@ export const products: Product[] = [
     name: "Chuda Mixture",
     tagline: "The everyday indulgence",
     category: "Savouries",
-    image: chuda.url,
+    image: chuda,
     shortDescription: "Flattened rice tossed with peanuts, curry leaves and warm spices.",
     description:
       "Our Chuda Mixture layers roasted chuda with peanuts, cashews, coconut, curry leaves and a hint of turmeric — the perfect balance of light, savoury and aromatic.",
@@ -86,7 +86,7 @@ export const products: Product[] = [
     name: "Fried Badi",
     tagline: "Crunchy heirloom nuggets",
     category: "Savouries",
-    image: badi.url,
+    image: badi,
     shortDescription: "Sun-dried lentil nuggets fried into crisp, savoury crunch.",
     description:
       "Hand-shaped, sun-dried under the Odia sun for days and then fried till they blush golden. A traditional accompaniment reborn as a modern snack.",
@@ -105,7 +105,7 @@ export const products: Product[] = [
     name: "Moa Bites",
     tagline: "Puffed rice, bound in jaggery",
     category: "Sweets",
-    image: moa.url,
+    image: moa,
     shortDescription: "Light, airy puffed-rice bites with a caramel-jaggery finish.",
     description:
       "Moa is a cherished traditional sweet made from puffed rice bound with rich jaggery — light, airy and softly caramel-sweet. Crafted to retain its original essence while delivering a premium snacking experience.",
@@ -122,7 +122,7 @@ export const products: Product[] = [
     name: "Arisa Pitha",
     tagline: "Just the way you remember",
     category: "Sweets",
-    image: arisa.url,
+    image: arisa,
     shortDescription: "Jaggery-sweetened rice-flour pitha, kissed with sesame.",
     description:
       "Arisa is a celebration of authentic traditional taste — rice flour and jaggery pressed together, crowned with sesame and fried till a deep amber. A pitha that carries the memory of every Odia festival.",

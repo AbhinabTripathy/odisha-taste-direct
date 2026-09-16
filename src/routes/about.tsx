@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { Heart, Sparkles, Leaf, Users, Hammer } from "lucide-react";
-import logo from "@/assets/boitas-logo.png.asset.json";
+import logo from "@/assets/boitas-logo.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -29,7 +29,7 @@ function AboutPage() {
     <>
       <section className="pt-40 pb-20 text-center">
         <div className="container-x max-w-3xl">
-          <img src={logo.url} alt="Boitas" className="w-20 h-20 mx-auto" />
+          <img src={logo} alt="Boitas" className="w-20 h-20 mx-auto" />
           <p className="uppercase tracking-[0.3em] text-xs text-accent mt-6">Our Story</p>
           <h1 className="font-serif text-5xl md:text-6xl text-primary mt-4">
             A quiet love letter to the food we grew up with.

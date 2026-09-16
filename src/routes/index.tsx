@@ -4,15 +4,15 @@ import { ArrowRight, Leaf, Sparkles, MapPin, ChefHat, Quote } from "lucide-react
 import { products, WHATSAPP_NUMBER } from "@/lib/products";
 import { ProductCard } from "@/components/product-card";
 import { WA_URL } from "@/lib/cart";
-import heroImg from "@/assets/Khaja_Masala.png.asset.json";
+import heroImg from "@/assets/Khaja_Masala.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Boitas — Authentic Odia Delicacies, Crafted with Tradition" },
       { property: "og:title", content: "Boitas — Authentic Odia Delicacies" },
-      { property: "og:image", content: heroImg.url },
-      { property: "twitter:image", content: heroImg.url },
+      { property: "og:image", content: heroImg },
+      { property: "twitter:image", content: heroImg },
     ],
   }),
   component: HomePage,
@@ -95,7 +95,7 @@ function HomePage() {
             className="relative"
           >
             <div className="absolute -inset-6 bg-secondary rounded-[2rem] rotate-2" />
-            <img src={heroImg.url} alt="Boitas Khaja Masala Crunch" className="relative rounded-[2rem] shadow-2xl w-full object-cover" />
+            <img src={heroImg} alt="Boitas Khaja Masala Crunch" className="relative rounded-[2rem] shadow-2xl w-full object-cover" />
             <div className="absolute -bottom-6 -left-6 card-soft px-5 py-3 hidden sm:flex items-center gap-3">
               <Quote className="w-4 h-4 text-accent" />
               <p className="font-serif italic text-sm">Layers of joy in every bite</p>
