@@ -1,0 +1,164 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-maroon: var(--maroon);
+  --color-beige: var(--beige);
+  --color-gold: var(--gold);
+  --color-charcoal: var(--charcoal);
+  --font-serif: "Fraunces", "Playfair Display", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-script: "Caveat", cursive;
+}
+
+:root {
+  --radius: 0.75rem;
+
+  --maroon: #7A1F1F;
+  --beige: #F5E6D3;
+  --gold: #D9A441;
+  --charcoal: #222222;
+
+  --background: #FFFDF9;
+  --foreground: #222222;
+  --card: #FFFFFF;
+  --card-foreground: #222222;
+  --primary: #7A1F1F;
+  --primary-foreground: #FFFDF9;
+  --secondary: #F5E6D3;
+  --secondary-foreground: #7A1F1F;
+  --muted: #F5EFE4;
+  --muted-foreground: #6b5a49;
+  --accent: #D9A441;
+  --accent-foreground: #222222;
+  --border: #ecdcc4;
+  --input: #ecdcc4;
+  --ring: #D9A441;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility container-x {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  max-width: 1200px;
+}
+
+@utility gold-underline {
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 2px;
+    background: var(--gold);
+    margin-top: 0.5rem;
+  }
+}
+
+@utility btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 9999px;
+  background: var(--maroon);
+  color: var(--primary-foreground);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.2s ease;
+  box-shadow: 0 8px 24px -12px rgba(122, 31, 31, 0.5);
+  &:hover {
+    background: #641818;
+    transform: translateY(-1px);
+    box-shadow: 0 12px 28px -12px rgba(122, 31, 31, 0.6);
+  }
+}
+
+@utility btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 9999px;
+  border: 1.5px solid var(--maroon);
+  color: var(--maroon);
+  background: transparent;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  &:hover {
+    background: var(--maroon);
+    color: var(--primary-foreground);
+  }
+}
+
+@utility btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 9999px;
+  background: var(--gold);
+  color: #3a2a10;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 24px -12px rgba(217, 164, 65, 0.6);
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px -12px rgba(217, 164, 65, 0.8);
+  }
+}
+
+@utility card-soft {
+  background: var(--card);
+  border-radius: 1.25rem;
+  box-shadow: 0 1px 2px rgba(34, 34, 34, 0.04), 0 10px 30px -20px rgba(122, 31, 31, 0.18);
+  border: 1px solid #f1e3cf;
+}
